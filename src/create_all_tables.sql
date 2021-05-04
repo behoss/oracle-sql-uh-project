@@ -100,7 +100,7 @@ CREATE TABLE loans(
     user_id NUMBER(5),
     issue_date DATE,
     overdue_date DATE,
-    PRIMARY KEY(barcode),
+    PRIMARY KEY(barcode, user_id, issue_date),
     FOREIGN KEY(barcode) REFERENCES books(barcode),
     FOREIGN KEY(user_id) REFERENCES users(user_id)
 );
